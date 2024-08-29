@@ -1,0 +1,30 @@
+Cypress : 
+
+1. Installation cypress + other packages define in package.json.
+    > npm install
+
+3. Configurations: 
+    - Cypress - cypress.config.js to configure the 2 running instances:
+        * backend node process can be configured at the running time - using setupNodeEvents 
+            (! to use npm library in node process we need to set it false for the browser in package.json )
+            - define the preprocessor to read gherkin files (BDD) - cucumber preprocessor & esbuild and bind it with step implemenation
+            - define the output folder for allure report
+        * Injected code running in browser process - other attributes.
+            - define the path for features files.
+            - configure cypress to clear screenshot after each run.
+    - Cucumber : to configure the tests for the cucumber plugin we use the file .cypress-cucumber-preprocessorrc:
+        * Specifying the step implementation for the Gherkin scenarios.
+    - Cross Browser testing : Add script to run same tests cases across different browsers 
+
+4. Running tests and generating reports  
+    - There is 2 modes - interactive or headless : basic commands are defined within script of package.json 
+        * to run cypress in interactive mode we use the commands : npx cypress open ... 
+        * to run cypress in headless mode we use instead commands : npx cypress run ...  
+
+5. BASIC COMMANDS : npm run 
+    * cy:open                   => to open cypress in interactive mode.
+    * cy:run                    => to run cypress in headless mode.
+    * cy:run-all-features       => to run all features files at once in headless mode.
+    * cy:allure-generate        => to generate allure report after finishing the execution of scenarios.
+    * cy:allure-open            => to serve allure report locally.
+    * test:cross-browser        => to run tests throw different browser in headless mode.

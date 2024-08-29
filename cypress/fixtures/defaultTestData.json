@@ -1,0 +1,11 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "fullName": "John Doe",
+    "email": "john.doe@example.com",
+    "fileName": "document_format/doc.pdf",
+    "fileNameWithSize": "doc.pdf (10.0KB)",
+    "title": "This is a title example",
+    "documentDescriptionTextarea": "this is a random document description",
+    "categorySelect": "Category A"
+}

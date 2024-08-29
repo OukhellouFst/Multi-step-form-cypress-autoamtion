@@ -1,0 +1,47 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Cypress project to automate multi-step form interface.",
+  "main": "index.js",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "child_process": false
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run-all-features": "npx cypress run --spec cypress/e2e/features/*.feature",
+    "cy:allure-generate": "allure generate allure-results --clean -o allure-report",
+    "cy:allure-open": "allure open allure-report",
+    "test:cross-browser": "node scripts/run-cross-browser-tests.js"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^2.15.1",
+    "archiver": "^7.0.1",
+    "cypress": "^13.10.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-wait-until": "^3.0.1",
+    "esbuild": "^0.21.3",
+    "fs-extra": "^11.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "keywords": [
+    "Automation",
+    "tests",
+    "cypress"
+  ],
+  "author": "Smail Oukhellou",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "save-dev": "^0.0.1-security"
+  }
+}
