@@ -1,4 +1,4 @@
-# Multi-step form testing - Cypress 
+# Multi-Step Form Cypress Automation
 This project uses Cypress for end-to-end testing, incorporating Cucumber for Behavior-Driven Development (BDD) and Allure for reporting.
 
 ### Installation
